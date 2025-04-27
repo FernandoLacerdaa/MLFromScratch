@@ -2,9 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 class KMeansClustering:
-    def __init__(self, k:int=3, guessed_num:int = 6):
+    def __init__(self, k:int=3):
         self.k = k
-        self.centroids = guessed_num
+        self.centroids = None
         
     @staticmethod
     def euclidean_distance(data_points, centroids):
@@ -53,4 +53,5 @@ labels = kmeans.fit(random_points)
 plt.scatter (random_points[:, 0], random_points[:,1], c=labels)
 plt.scatter (kmeans.centroids[:, 0], kmeans.centroids[:,1], c=range(len(kmeans.centroids)),
              marker="*", s=200)
-plt.show()
+
+plt.savefig("my_plot.png", dpi=150, bbox_inches="tight")

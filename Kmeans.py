@@ -54,4 +54,4 @@ plt.scatter (random_points[:, 0], random_points[:,1], c=labels)
 plt.scatter (kmeans.centroids[:, 0], kmeans.centroids[:,1], c=range(len(kmeans.centroids)),
              marker="*", s=200)
 
-plt.savefig("my_plot.png", dpi=150, bbox_inches="tight")
+plt.show()
